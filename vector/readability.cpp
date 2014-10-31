@@ -1,5 +1,6 @@
 // A simple and readable approach that ustilizes std::sort
-// Not meant to be very efficent, but it was easy to implement
+// Not meant to be too efficent, but it was stupid easy to implement
+// It's one line of code, that has to count for readability
 #include "helper.cpp"
 #include <algorithm>
 #include <stdlib.h> 

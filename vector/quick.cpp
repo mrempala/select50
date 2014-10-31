@@ -7,12 +7,11 @@
 
 // Straight offa wikipedia pseudo code for quick sort
 int partition(std::vector<int> &numVec, int left, int right){
-     //pivotIndex := choosePivot(array, left, right)
      int pivotIndex = left; // Numbers are random, so this should be okay
+                            // Alternatives include picking a random pivot
      int pivotValue = numVec[pivotIndex];
      std::swap(numVec[pivotIndex], numVec[right]);
      int storeIndex = left;
-     //for i from left to right - 1
      for( int i = left; i < right; i++){
          if( numVec[i] < pivotValue ){
              std::swap(numVec[i], numVec[storeIndex]);
