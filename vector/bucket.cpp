@@ -4,7 +4,7 @@
 // Originally did 10,000 buckets for 100,000 values, but 
 // timing the program shows that 1,000 buckets is faster,
 // most likely due to time required for allocating memory.
-// Might be faster to avoid using vectors and instead use static sized arrays.
+// Should be faster to avoid using vectors and instead use static sized arrays.
 #include "helper.cpp"
 #include <stdlib.h>
 #include <iostream> 
@@ -27,7 +27,6 @@ int main(){
             std::cout<<"something went wrong, yo"<<std::endl;
         else
             bucketArr[bucket].push_back(value);
-    
     }
     
     int bucket = 0;

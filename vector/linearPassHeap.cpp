@@ -35,8 +35,6 @@ int main(int argc,char *argv[]){
     //Sort the vector of 50 smallest ints
     std::sort( heapVec.begin(), heapVec.end() );
     
-    
-    
     output50Smallest(heapVec, "output/output_linearPassHeap.txt");
     
     return 0;
