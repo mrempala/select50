@@ -35,12 +35,12 @@ int main(int argc,char *argv[]){
         }
     }
     inputFile.close();
-    
+
     //Sort the vector of 50 smallest ints
     std::sort( heapVec.begin(), heapVec.end() );
     
     //Output Smallest 50
-    outputFile.open("output/output_heap.txt");
+    outputFile.open("output/output_smallMaxHeap.txt");
     for(int i = 0; i<50; i++){
         outputFile<<heapVec[i]<<'\n';
     }
