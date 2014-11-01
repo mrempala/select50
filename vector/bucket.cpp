@@ -15,8 +15,9 @@ int main(){
     std::vector<int> numVec;
     std::vector<int> resultVec;
     std::vector<int> tempVec;
-    genNumVec(numVec);
     std::vector<int> bucketArr[1000];
+    
+    genNumVec(numVec);
     
     for(int i = 0; i<numVec.size(); i++){
         int value = numVec[i];
