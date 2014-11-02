@@ -10,6 +10,7 @@
 #include <iostream> 
 #include <algorithm>
 #include <vector>
+#include <time.h>
 
 int main(){
     std::vector<int> numVec;
@@ -19,16 +20,20 @@ int main(){
     
     genNumVec(numVec);
     
+    clock_t progTime = clock();
+    
+    // Put stuff into buckets
     for(int i = 0; i<numVec.size(); i++){
         int value = numVec[i];
         //Won't work with 1 billion inclusive
         int bucket = value / 1000000;
         if(bucket > 9999)
-            std::cout<<"something went wrong, yo"<<std::endl;
+            std::cout<<"Something went wrong"<<std::endl;
         else
             bucketArr[bucket].push_back(value);
     }
     
+    // Put stuff from smallest buckets into result vector
     int bucket = 0;
     while( resultVec.size() < 50 ){
         if( !bucketArr[bucket].empty() ){
@@ -38,6 +43,9 @@ int main(){
         }
         bucket++;
     }
+    
+    progTime = clock() - progTime;
+    std::cout<<"Time: "<<((float)progTime)/CLOCKS_PER_SEC<<" seconds"<<std::endl;
     
     output50Smallest(resultVec, "output/output_bucket.txt");
 

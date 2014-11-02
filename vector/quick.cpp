@@ -1,11 +1,12 @@
-// Efficent time complexity approach
 // Utilizes quicksort partitioning,
 // but avoids sorting unneeded partitions.
 #include "helper.cpp"
 #include <stdlib.h> 
 #include <vector>
+#include <iostream>
+#include <time.h>
 
-// Straight offa wikipedia pseudo code for quick sort
+// Straight off wikipedia's pseudo code for quick sort
 int partition(std::vector<int> &numVec, int left, int right){
      int pivotIndex = left; // Numbers are random, so this should be okay
                             // Alternatives include picking a random pivot
@@ -27,7 +28,7 @@ void quick(std::vector<int> &A, int i, int k){
       int p = partition(A, i, k);
       quick(A, i, p - 1);
 
-      // This one if statement makes the magic happen
+      // This one if statement makes all the difference
       if( p < 50 ){
           quick(A, p + 1, k);
       }
@@ -38,7 +39,12 @@ int main(){
     std::vector<int> numVec;
     genNumVec(numVec);
 
+    clock_t progTime = clock();
+
     quick(numVec, 0, numVec.size()-1);
+    
+    progTime = clock() - progTime;
+    std::cout<<"Time: "<<((float)progTime)/CLOCKS_PER_SEC<<" seconds"<<std::endl;
     
     output50Smallest(numVec, "output/output_quick.txt");
 

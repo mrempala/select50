@@ -1,13 +1,33 @@
 Time Complexity:
-1.
-2.
+1. maxHeap50.cpp
+2. bucket.cpp
 
 Space Complexity:
-1.
-2.
+1. quick.cpp
+2. minHeap.cpp 
 
 Readability:
 1. readability.cpp
 
-Performance:
+
+Exec time using clock from time.h (in seconds):
+bucket.cpp       0.058
+maxHeap50.cpp    0.011 
+minHeap.cpp      0.104
+quick.cpp        0.054
+readability.cpp  0.455
+z.cpp            0.008
+
+
+
+Worse exec time measurements using linux console time command
+Example command: time ./a.out
+Exec Time in seconds (real time and without -O3):
+bucket.cpp       0.135
+minHeap.cpp      0.185
+quick.cpp        0.130
+readability.cpp  0.530
+maxHeap50.cpp    0.080 !!!
+z.cpp            0.075
+base benchmark   0.070
 

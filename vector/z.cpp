@@ -20,6 +20,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm> 
+#include <time.h>
 
 const int SAFETY = 10;
 
@@ -29,6 +30,9 @@ int main(int argc,char *argv[]){
     int inputInt;
     
     genNumVec(numVec);
+    
+    
+    clock_t progTime = clock();
     
     for(int i = 0; i < numVec.size(); i++){
         if(numVec[i] < SAFETY * 50000 ){
@@ -42,6 +46,10 @@ int main(int argc,char *argv[]){
     }
     
     std::sort( resultVec.begin(), resultVec.end() );
+    
+    
+    progTime = clock() - progTime;
+    std::cout<<"Time: "<<((float)progTime)/CLOCKS_PER_SEC<<" seconds"<<std::endl;
     
     output50Smallest(resultVec, "output/output_z.txt");
     

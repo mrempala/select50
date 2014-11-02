@@ -5,24 +5,12 @@
 #include <algorithm>
 #include <stdlib.h> 
 #include <vector>
-#include <iostream>
-#include <time.h>
 
 int main(){
     std::vector<int> numVec;
     genNumVec(numVec);
     
-    clock_t progTime = clock();
-    
-    
-    // Yup, this is all there is to it
-    std::sort(numVec.begin(), numVec.end());
-    
-    
-    progTime = clock() - progTime;
-    std::cout<<"Time: "<<((float)progTime)/CLOCKS_PER_SEC<<" seconds"<<std::endl;
-    
-    output50Smallest(numVec, "output/output_readability.txt");
+    output50Smallest(numVec, "output/junk.txt~");
     
     return 0;
 }
