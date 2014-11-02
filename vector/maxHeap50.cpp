@@ -43,7 +43,7 @@ int main(int argc,char *argv[]){
     progTime = clock() - progTime;
     std::cout<<"Time: "<<((float)progTime)/CLOCKS_PER_SEC<<" seconds"<<std::endl;
     
-    output50Smallest(heapVec, "output/output_linearPassHeap.txt");
+    output50Smallest(heapVec, "output/output_maxHeap50.txt");
     
     return 0;
 }

@@ -1,13 +1,16 @@
 Time Complexity:
-1. maxHeap50.cpp
-2. bucket.cpp
+1. maxHeap50.cpp - By far the fastest algorithm. O(n + n * lg50) *worst* case.
+                   Usually better than that as most elements will not need
+                   to be inserted into the 50 sized max heap at any time.
+                   Worst case occurs if elements are reverse sorted.
+2. bucket.cpp    - 3rd fastest and uses a lot of additional memory.
 
 Space Complexity:
-1. quick.cpp
-2. minHeap.cpp 
+1. quick.cpp   - No additional memory, modifies original vector
+2. minHeap.cpp - No additional memory, modifies original vector
 
 Readability:
-1. readability.cpp
+1. readability.cpp - Basically a one liner that uses std::sort
 
 
 Exec time using clock from time.h (in seconds):

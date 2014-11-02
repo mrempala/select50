@@ -30,5 +30,5 @@ int main(){
     progTime = clock() - progTime;
     std::cout<<"Time: "<<((float)progTime)/CLOCKS_PER_SEC<<" seconds"<<std::endl;
     
-    output50Smallest(resultVec, "output/output_heap.txt");
+    output50Smallest(resultVec, "output/output_minHeap.txt");
 }
