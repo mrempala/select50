@@ -1,5 +1,5 @@
 Time Complexity:
-1. maxHeap50.cpp - By far the fastest algorithm. O(n + n * lg50) *worst* case.
+1. maxHeap50.cpp - The fastest algorithm. O(n + n * lg50) *worst* case.
                    Usually better than that as most elements will not need
                    to be inserted into the 50 sized max heap at any time.
                    Worst case occurs if elements are reverse sorted.
